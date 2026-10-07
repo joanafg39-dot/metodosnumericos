@@ -1,0 +1,10 @@
+# Lo que genera la computadora y no se sube al repositorio
+practica2/raices
+*.o
+*.out
+*.exe
+__pycache__/
+*.pyc
+octave-workspace
+.DS_Store
+Thumbs.db

@@ -1,0 +1,24 @@
+# Entorno del curso · Métodos Numéricos en Ingeniería (1151039) · 26-O
+#
+# Va en la RAÍZ del repositorio del equipo, junto a tarea1/ y practica1/. Así el
+# contenedor ve todo el repositorio en /trabajo, y sirve para todas las prácticas.
+#
+#   docker compose up -d                 prender
+#   docker compose exec metodos bash     entrar a trabajar
+#   docker compose stop                  apagar
+#
+# Usa la misma imagen que construyó en la Tarea 1: no se vuelve a construir.
+
+services:
+  metodos:
+    build: .
+    image: metodos-1151039:26o
+    container_name: metodos_equipo
+    volumes:
+      - ./:/trabajo                 # todo el repositorio, visto desde dentro
+    working_dir: /trabajo
+    stdin_open: true
+    tty: true
+    environment:
+      OMP_NUM_THREADS: "1"
+      MPLBACKEND: "Agg"

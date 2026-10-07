@@ -1,0 +1,24 @@
+# Entorno de la Práctica 2 · Métodos Numéricos en Ingeniería (1151039) · 26-O
+#
+#   docker compose up -d                 prender
+#   docker compose exec metodos bash     entrar a trabajar
+#   docker compose stop                  apagar
+#
+# Es el mismo entorno del curso: usa la misma imagen que ContenedorVFinal, así que
+# si ya la construyó para la Tarea 1 no se vuelve a construir. Sólo cambia el
+# nombre del contenedor, para que los dos puedan existir a la vez.
+# Cada línea está explicada en docker_tutorial.md, partes 4, 5 y 7.
+
+services:
+  metodos:
+    build: .                        # construye con el Dockerfile de esta carpeta
+    image: metodos-1151039:26o      # la misma imagen de todo el curso
+    container_name: metodos_practica2
+    volumes:
+      - ./:/trabajo                 # esta carpeta, vista desde dentro
+    working_dir: /trabajo
+    stdin_open: true                # las dos mantienen el contenedor
+    tty: true                       #   encendido, esperando órdenes
+    environment:
+      OMP_NUM_THREADS: "1"          # un solo hilo: resultados repetibles
+      MPLBACKEND: "Agg"             # figuras a archivo, no a ventana
