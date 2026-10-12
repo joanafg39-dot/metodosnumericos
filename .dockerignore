@@ -1,0 +1,39 @@
+# Qué NO se manda al motor de Docker al construir la imagen.
+#
+# Al ejecutar `docker compose build`, Docker copia la carpeta del contexto a su
+# propio motor antes de empezar. Sin este archivo mandaría también el repositorio
+# entero —figuras, binarios, el historial de Git— y la construcción tardaría
+# mucho más de lo necesario. Es el equivalente del .gitignore, pero para Docker.
+
+# El historial y la configuración de Git
+.git
+.gitignore
+
+# Binarios y objetos de C
+*.o
+*.out
+*.exe
+bin/
+
+# Entornos y cachés de Python
+__pycache__/
+.venv/
+*.pyc
+
+# Salidas que el programa vuelve a generar
+figuras/
+*.png
+*.eps
+*.pdf
+octave-workspace
+
+# Temporales del sistema y del editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+
+# El propio material del profesor: no tiene nada que hacer dentro de la imagen
+*.pptx
+*.docx
