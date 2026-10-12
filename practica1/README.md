@@ -3,7 +3,7 @@
 **UEA 1151039 · Métodos Numéricos en Ingeniería · Trimestre 26-O · UAM Azcapotzalco**
 **Profesor:** M. en C. Gabriel Hurtado Avilés
 
-| Integrante  |Flores Gutierrez Joana |
+| Integrante |Flores Gutierrez Joana |
 | Matricula| 2253078289|
 | Repositorio de la Tarea 1 de | Modalidad Individual |
 | Fecha |12/10/2026 |
@@ -11,9 +11,13 @@
 ## 1. Octave y Python
 
 En este primer procedimiento, se ejecutaron los programas macluarin.m y maclaurin.py, sin realizar ninguna modificacion, es decir, utilizando tres cifras significativas y el valor de (x=0.5)
+
 Evidencia de Octave 
+
 ![Octave](img/01-octave.png)
+
 Evidencia de Python 
+
 ![Python](img/02-python.png)
 
 ¿Coinciden con la lámina 25 de la unidad I? Si, los resultados de la ejecucion coidicen exactamente con la teroia y la lamina.
@@ -29,6 +33,7 @@ Para la primera modificacion, calcula cada nuevo termino de la serie a partir de
 Finalmente se compilo y ejecuto una tabla, alcanzando el criterio de paro con seis terminos.
 
 Evidencia de C
+
 ![C](img/03-c.png)
 
 ## 3. Más cifras significativas
